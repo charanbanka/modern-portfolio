@@ -1,0 +1,26 @@
+.skills {
+  background-color: rgb(251, 248, 248);
+  padding: 50px 0;
+}
+
+.skill {
+  opacity: 0;
+  transform: translateY(0);
+
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When in view, add the slide-up animation */
+.slide-up {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

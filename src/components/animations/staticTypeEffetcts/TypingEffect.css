@@ -1,0 +1,29 @@
+.typing-container {
+    /* font-family: monospace; */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 300px; /* Adjust to the length of your text */
+    /* border-right: 2px solid black; Cursor effect */
+    animation: typing 4s steps(20) 1, blink 0.5s step-end 1;
+  }
+  
+  /* Typing effect */
+  @keyframes typing {
+    from {
+      width: 0; /* Start with no text visible */
+    }
+    to {
+      width: 300px; /* Reveal all 20 characters */
+    }
+  }
+  
+  /* Blinking cursor */
+  @keyframes blink {
+    from {
+      border-right-color: black;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  

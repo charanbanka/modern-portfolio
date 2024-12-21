@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; 
+    background-color: #17153B;
+    height: 60px;
+    color: white;
+}
+
+.navTag {
+    cursor: pointer;
+    color: "white";
+}
+
+.navTag:hover {
+    color: #F75F00;
+    text-decoration: underline;
+}
+

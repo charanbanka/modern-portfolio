@@ -1,0 +1,130 @@
+/* Base styles */
+.home-container {
+  background-color: rgb(30, 28, 28);
+  background: hsla(270, 94%, 25%, 1);
+  height: 100vh;
+  padding: 40px 100px;
+}
+
+.home {
+  display: flex; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  text-align: center;
+  background-color: rgb(17, 9, 57);
+  flex-direction: column;
+  color: white;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.home-content {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-left-content,
+.home-right-content {
+  flex: 1;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home-left-content {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.home-right-content {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.downloadcv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #f75f00;
+}
+.downloadcv:hover {
+  background-color: #f75f00;
+  color: white;
+}
+
+.hey-text {
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+.home-right-content img {
+  height: 350px;
+  width: 330px;
+}
+
+.home-icon {
+  display: none;
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+  /* Hide header on mobile */
+  .home-header {
+    font-size: 14px;
+  }
+  .home-header-tags {
+    display: none;
+  }
+
+  .downloadcv {
+    display: none;
+  }
+
+
+
+  /* Reduce padding on mobile */
+  .home-container {
+    padding: 20px 40px;
+  }
+
+  /* Adjust home content for smaller screens */
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-left-content,
+  .home-right-content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Adjust the profile image size */
+  .home-right-content img {
+    height: 200px;
+    width: 190px;
+  }
+
+  /* Optional: Adjust text sizes on mobile */
+  .main-text {
+    font-size: 1.6rem;
+  }
+
+  .portfolio {
+    font-size: 12px;
+  }
+  .text-xl {
+    font-size: 1.2rem;
+  }
+}
