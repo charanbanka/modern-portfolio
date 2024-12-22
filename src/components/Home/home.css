@@ -14,6 +14,7 @@
   background-color: rgb(17, 9, 57);
   flex-direction: column;
   color: white;
+  height: 100%;
 }
 
 .home-header {
@@ -29,6 +30,7 @@
   display: flex;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  height: 100%;
 }
 
 .home-left-content,
@@ -80,8 +82,14 @@
 /* Mobile-specific adjustments */
 @media screen and (max-width: 768px) {
   /* Hide header on mobile */
+  .home-container {
+    padding: 0;
+  }
+  .home-icon {
+    display: block;
+  }
   .home-header {
-    font-size: 14px;
+    font-size: 18px;
   }
   .home-header-tags {
     display: none;
@@ -89,13 +97,6 @@
 
   .downloadcv {
     display: none;
-  }
-
-
-
-  /* Reduce padding on mobile */
-  .home-container {
-    padding: 20px 40px;
   }
 
   /* Adjust home content for smaller screens */
@@ -110,10 +111,14 @@
     padding: 15px;
   }
 
+  .home-left-content {
+    padding: 10px 30px;
+  }
+
   /* Adjust the profile image size */
   .home-right-content img {
-    height: 200px;
-    width: 190px;
+    height: 270px;
+    width: 250px;
   }
 
   /* Optional: Adjust text sizes on mobile */
@@ -122,7 +127,7 @@
   }
 
   .portfolio {
-    font-size: 12px;
+    font-size: 18px;
   }
   .text-xl {
     font-size: 1.2rem;

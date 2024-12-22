@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import "./home.css";
 
 import { FaGithub } from "react-icons/fa";
@@ -12,6 +12,7 @@ import StaticTypingEffect from "../animations/staticTypeEffetcts/index.tsx";
 import DynamicTypingEffect from "../animations/dynamicTypeEffects/dynamicTypyingEfects.tsx";
 
 function Home() {
+  const [menu, setMenu] = useState(false);
   let experience = useMemo(() => {
     // Create a Date object for March 1, 2021
     const march2021 = new Date("2021-03-01");
@@ -34,11 +35,14 @@ function Home() {
     return roundedYears;
   }, []);
 
+  const updateMenu = () =>{
+    setMenu(false)
+  }
   return (
     <div className="home-container">
       <div className="home">
         <div className="home-header">
-          <div className="main-text portfolio">Portfolio</div>
+          <div className="main-text portfolio">Home</div>
           <div className="flex justify-around gap-4 items-center home-header-tags">
             <div className="home-header-tag">
               <a href="#experience">Experience</a>
@@ -55,7 +59,26 @@ function Home() {
             </div>
           </div>
           <div className="home-icon">
-            <IoMenuSharp/>
+            <div className="relative">
+              <IoMenuSharp onClick={() => setMenu(!menu)} />
+              {menu && (
+                <div className="absolute flex flex-col top-4 right-0 bg-orange-600 p-1 rounded-md gap-1 divide-y divide-solid" >
+                  <div className="home-header-tag" onClick={updateMenu} >
+                    <a href="#experience" >Experience</a>
+                  </div>
+                  <div className="home-header-tag" onClick={updateMenu}>
+                    <a href="#projects">Projects</a>
+                  </div>
+                  <div className="home-header-tag" onClick={updateMenu}>
+                    <a href="#skills">Skills</a>
+                  </div>
+
+                  <div className="home-header-tag" onClick={updateMenu}>
+                    <a href="#contact">Contact</a>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="home-content">
@@ -87,7 +110,10 @@ function Home() {
                 <a target="_blank" href="https://github.com/charanbanka">
                   <FaGithub className="main-color cursor-pointer" size="25px" />
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/charan-banka-9a4589160/">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/charan-banka-9a4589160/"
+                >
                   <FaLinkedin
                     className="main-color cursor-pointer"
                     size="25px"
