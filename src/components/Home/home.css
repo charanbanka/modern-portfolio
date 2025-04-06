@@ -11,7 +11,10 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
   text-align: center;
-  background-color: rgb(17, 9, 57);
+  /* background-color: rgb(17, 9, 57); */
+  
+  background: #001F3F;
+
   flex-direction: column;
   color: white;
   height: 100%;

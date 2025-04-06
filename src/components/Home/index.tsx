@@ -6,8 +6,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { IoMenuSharp } from "react-icons/io5";
+import { TbBrandLeetcode } from "react-icons/tb";
 
 import imgUrl from "./gateway-selfie.jpg";
+// import bgrImageUrl from "./blue-wallpaper.jpeg";
+import bgrImageUrl from "./Video-background.jpeg";
+
+
 import StaticTypingEffect from "../animations/staticTypeEffetcts/index.tsx";
 import DynamicTypingEffect from "../animations/dynamicTypeEffects/dynamicTypyingEfects.tsx";
 
@@ -35,12 +40,15 @@ function Home() {
     return roundedYears;
   }, []);
 
-  const updateMenu = () =>{
-    setMenu(false)
-  }
+  const updateMenu = () => {
+    setMenu(false);
+  };
   return (
-    <div className="home-container">
-      <div className="home">
+    <div
+      className="home-container"
+      style={{ backgroundImage: `url(${bgrImageUrl})` }}
+    >
+      <div className="home" >
         <div className="home-header">
           <div className="main-text portfolio">Home</div>
           <div className="flex justify-around gap-4 items-center home-header-tags">
@@ -62,9 +70,9 @@ function Home() {
             <div className="relative">
               <IoMenuSharp onClick={() => setMenu(!menu)} />
               {menu && (
-                <div className="absolute flex flex-col top-4 right-0 bg-orange-600 p-1 rounded-md gap-1 divide-y divide-solid" >
-                  <div className="home-header-tag" onClick={updateMenu} >
-                    <a href="#experience" >Experience</a>
+                <div className="absolute flex flex-col top-4 right-0 bg-orange-600 p-1 rounded-md gap-1 divide-y divide-solid">
+                  <div className="home-header-tag" onClick={updateMenu}>
+                    <a href="#experience">Experience</a>
                   </div>
                   <div className="home-header-tag" onClick={updateMenu}>
                     <a href="#projects">Projects</a>
@@ -104,23 +112,32 @@ function Home() {
                 </p>
               </div>
               <div className="mt-4 flex flex-row items-center gap-2">
-                <button className="px-4 py-1 rounded downloadcv mr-4 sm:hidden">
+                {/* <button className="px-4 py-1 rounded downloadcv mr-4 sm:hidden">
                   Download CV <IoMdDownload />
-                </button>
-                <a target="_blank" href="https://github.com/charanbanka">
+                </button> */}
+                <a
+                  target="_blank"
+                  href="https://github.com/charanbanka"
+                  title="github"
+                >
                   <FaGithub className="main-color cursor-pointer" size="25px" />
                 </a>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/in/charan-banka-9a4589160/"
+                  title="linkedin"
                 >
                   <FaLinkedin
                     className="main-color cursor-pointer"
                     size="25px"
                   />
                 </a>
-                <a target="_blank" href="https://github.com/charanbanka">
-                  <FaTwitterSquare
+                <a
+                  target="_blank"
+                  href="https://leetcode.com/u/bankachara999/"
+                  title="leetcode"
+                >
+                  <TbBrandLeetcode
                     className="main-color cursor-pointer"
                     size="25px"
                   />

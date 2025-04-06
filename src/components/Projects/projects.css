@@ -18,7 +18,7 @@
 .project-card {
   box-shadow: 10px 20px 8px rgba(0, 0, 0, 0.1), 5px 10px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  width: 300px;
+  width: 320px;
   /* padding: 10px 20px; */
   min-height: 380px;
   transform: scale(1); /* Initial state */
@@ -43,7 +43,7 @@
 
 .project-content {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-direction: column;
 }
 
